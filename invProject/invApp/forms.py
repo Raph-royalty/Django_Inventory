@@ -7,7 +7,7 @@ class ProductForm(forms.ModelForm):
         fields = '__all__'
         labels = {
             'product_id': 'Product ID',
-            'name': 'Product ID',
+            'name': 'Name',
             'sku': 'SKU',
             'price': 'Price',
             'quantity': 'Quantity',
@@ -15,7 +15,7 @@ class ProductForm(forms.ModelForm):
         }
         widgets = {
             'product_id': forms.NumberInput(attrs={'placeholder': 'e.g 1', 'class': 'form-control'}),
-            'name': forms.Textarea(attrs={'placeholder': 'e.g shirt', 'class': 'form-control'}),
+            'name': forms.TextInput(attrs={'placeholder': 'e.g shirt', 'class': 'form-control'}),
             'sku': forms.TextInput(attrs={'placeholder': 'e.g 12345', 'class': 'form-control'}),
             'price': forms.NumberInput(attrs={'placeholder': 'e.g 19.99', 'class': 'form-control'}),
             'quantity': forms.NumberInput(attrs={'placeholder': 'e.g 10', 'class': 'form-control'}),
